@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "strict": true,
+    "outDir": "build/dist",
+    "module": "esnext",
+    "target": "es2016",
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "rootDirs": ["./src", "./typings"],
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "noImplicitThis": false,
+    "experimentalDecorators": true
+  },
+  "include": [
+    "./src",
+    "./typings/index.d.ts",
+    "./node_modules/mini-types/global.d.ts",
+    "./node_modules/mini-types/types/page.d.ts",
+    "./node_modules/mini-types/types/api/index.d.ts"
+  ]
+}
