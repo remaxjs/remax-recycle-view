@@ -1,7 +1,7 @@
 module.exports = {
   globals: {
     __REMAX_HOST_COMPONENTS__: {},
-    my: {},
+    __REMAX_PX2RPX__: true,
   },
   transformIgnorePatterns: ['node_modules/(?!(.*remax.*))'],
   setupFiles: ['./tests/setup.js'],

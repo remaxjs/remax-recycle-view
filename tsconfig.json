@@ -2,13 +2,14 @@
   "compilerOptions": {
     "declaration": true,
     "strict": true,
-    "outDir": "build/dist",
+    "outDir": "buld/dist",
+    "target": "es5",
     "module": "esnext",
-    "target": "es2016",
-    "lib": ["es6", "dom"],
+    "lib": ["es2015", "dom"],
     "sourceMap": true,
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "moduleResolution": "node",
     "rootDirs": ["./src", "./typings"],
     "forceConsistentCasingInFileNames": true,
@@ -18,11 +19,5 @@
     "noImplicitThis": false,
     "experimentalDecorators": true
   },
-  "include": [
-    "./src",
-    "./typings/index.d.ts",
-    "./node_modules/mini-types/global.d.ts",
-    "./node_modules/mini-types/types/page.d.ts",
-    "./node_modules/mini-types/types/api/index.d.ts"
-  ]
+  "include": ["./src"]
 }

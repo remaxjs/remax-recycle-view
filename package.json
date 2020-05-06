@@ -47,7 +47,6 @@
     "prettier": "^1.19.1",
     "react": "^16.13.1",
     "remax": "^1.21.6",
-    "standard-version": "^7.1.0",
-    "ts-jest": "^25.4.0"
+    "standard-version": "^7.1.0"
   }
 }
