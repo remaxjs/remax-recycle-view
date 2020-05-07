@@ -28,7 +28,7 @@ const RecycleView: React.FunctionComponent<IRecycleProps & ScrollViewProps> = pr
       }, 0),
     [data],
   );
-  return <ScrollView style={{ height: LIST_HEIGHT }}>hello world.</ScrollView>;
+  return <ScrollView style={{ height: LIST_HEIGHT }}>{}</ScrollView>;
 };
 
 export default RecycleView;
