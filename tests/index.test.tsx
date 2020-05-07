@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 import React from 'react';
 import { render } from 'remax';
 import AppContainer from 'remax/esm/AppContainer';
@@ -10,10 +11,10 @@ beforeEach(() => {
 
 describe('src/index.tsx', () => {
   ENV.forEach(platform => {
-    process.env.REMAX_PLATFORM = platform;
     it(`should render correctly in platform ${platform}`, () => {
-      return import('../src/index').then((recycleViewModule: any) => {
-        const RecycleView = recycleViewModule.default;
+      jest.isolateModules(() => {
+        process.env.REMAX_PLATFORM = platform;
+        const RecycleView = require('../src/index').default;
         const container = new AppContainer({});
         render(<RecycleView renderItem={() => <div>hello</div>} />, container);
         expect(container.root.toJSON()).toMatchSnapshot();
@@ -22,8 +23,8 @@ describe('src/index.tsx', () => {
   });
 
   it(`should render correct LIST_HEIGHT 200rpx`, () => {
-    return import('../src/index').then((recycleViewModule: any) => {
-      const RecycleView = recycleViewModule.default;
+    jest.isolateModules(() => {
+      const RecycleView = require('../src/index').default;
       const container = new AppContainer({});
       render(
         <RecycleView
@@ -33,6 +34,13 @@ describe('src/index.tsx', () => {
         container,
       );
       expect(container.root.toJSON()).toMatchSnapshot();
+    });
+  });
+
+  it('should throw error when platform is unknown', () => {
+    jest.isolateModules(() => {
+      process.env.REMAX_PLATFORM = 'x';
+      expect(() => require('../src/index')).toThrow('current platform x is unknown');
     });
   });
 });

@@ -67,7 +67,11 @@ Object {
       "children": Array [],
       "id": 2,
       "props": Object {
+        "lowerThreshold": 50,
+        "onScroll": "$$REMAX_METHOD_2_onScroll",
+        "scrollTop": undefined,
         "style": "height:0rpx;",
+        "upperThreshold": 50,
       },
       "text": undefined,
       "type": "scroll-view",
