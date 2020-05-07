@@ -1,10 +1,9 @@
 import React from 'react';
-import { Platform } from 'remax';
 import {
-  ScrollView as AlipayScrollView,
-  ScrollViewProps as AlipayScrollViewProps,
-  getSystemInfoSync as alipayGetSystemInfoSync,
-} from 'remax/alipay';
+  ScrollView as AliScrollView,
+  ScrollViewProps as AliScrollViewProps,
+  getSystemInfoSync as aliGetSystemInfoSync,
+} from 'remax/ali';
 import {
   ScrollView as WechatScrollView,
   ScrollViewProps as WechatScrollViewProps,
@@ -17,26 +16,22 @@ import {
 } from 'remax/toutiao';
 
 let ScrollViewWrapper:
-  | typeof AlipayScrollView
+  | typeof AliScrollView
   | typeof TtScrollView
   | typeof WechatScrollView = WechatScrollView;
 
-switch (Platform.current) {
-  case 'alipay':
-    ScrollViewWrapper = AlipayScrollView;
-    break;
-  case 'toutiao':
-    ScrollViewWrapper = TtScrollView;
-    break;
-  case 'wechat':
-    ScrollViewWrapper = WechatScrollView;
-    break;
-  default:
-    throw new Error(`current platform ${Platform.current} is unknown`);
+if (process.env.REMAX_PLATFORM === 'ali') {
+  ScrollViewWrapper = AliScrollView;
+} else if (process.env.REMAX_PLATFORM === 'wechat') {
+  ScrollViewWrapper = WechatScrollView;
+} else if (process.env.REMAX_PLATFORM === 'toutiao') {
+  ScrollViewWrapper = TtScrollView;
+} else {
+  throw new Error(`current platform ${process.env.REMAX_PLATFORM} is unknown`);
 }
 
 export type ScrollViewProps = React.PropsWithChildren<
-  AlipayScrollViewProps & WechatScrollViewProps & TtScrollViewProps
+  AliScrollViewProps & WechatScrollViewProps & TtScrollViewProps
 >;
 
 const ScrollViewRender: React.ForwardRefRenderFunction<any, ScrollViewProps> = (props, ref) => {
@@ -51,23 +46,23 @@ const ScrollViewRender: React.ForwardRefRenderFunction<any, ScrollViewProps> = (
 export const ScrollView = React.forwardRef(ScrollViewRender);
 
 function getSystemInfo() {
-  switch (Platform.current) {
+  switch (process.env.REMAX_PLATFORM) {
     case 'wechat':
       return wechatGetSystemInfoSync();
     case 'toutiao':
       return ttGetSystemInfoSync();
-    case 'alipay':
-      return alipayGetSystemInfoSync();
+    case 'ali':
+      return aliGetSystemInfoSync();
     /* istanbul ignore next */
     // this case has been thrown before
     default:
-      throw new Error(`current platform ${Platform.current} is unknown`);
+      throw new Error(`current platform ${process.env.REMAX_PLATFORM} is unknown`);
   }
 }
 
 type SystemInfo =
   | ReturnType<typeof wechatGetSystemInfoSync>
-  | ReturnType<typeof alipayGetSystemInfoSync>
+  | ReturnType<typeof aliGetSystemInfoSync>
   | ReturnType<typeof ttGetSystemInfoSync>;
 
 export const systemInfo: SystemInfo = getSystemInfo();
