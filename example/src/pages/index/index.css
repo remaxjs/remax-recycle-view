@@ -1,12 +1,12 @@
 .app {
-  text-align: center;
   padding: 0 24px;
+  text-align: center;
 }
 
 .logo {
-  animation: logo-spin infinite 20s linear;
-  height: 240px;
   width: 240px;
+  height: 240px;
+  animation: logo-spin infinite 20s linear;
   pointer-events: none;
 }
 
@@ -16,9 +16,9 @@
 
 .header {
   padding-top: 30%;
-  background-color: #282c34;
-  font-size: 40px;
   color: white;
+  font-size: 40px;
+  background-color: #282c34;
 }
 
 @keyframes logo-spin {
