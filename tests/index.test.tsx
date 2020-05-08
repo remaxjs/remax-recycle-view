@@ -43,4 +43,24 @@ describe('src/index.tsx', () => {
       expect(() => require('../src/index')).toThrow('current platform x is unknown');
     });
   });
+
+  it('should render placeholder-image, header and bottom', () => {
+    jest.isolateModules(() => {
+      const RecycleView = require('../src/index').default;
+      const container = new AppContainer({});
+      render(
+        <RecycleView
+          headerHeight={50}
+          bottomHeight={50}
+          renderHeader={() => <div>header</div>}
+          renderBottom={() => <div>bottom</div>}
+          placeholderImage="https://via.placeholder.com/150"
+          data={[{ height: 100 }]}
+          renderItem={() => <div>hello</div>}
+        />,
+        container,
+      );
+      expect(container.root.toJSON()).toMatchSnapshot();
+    });
+  });
 });
