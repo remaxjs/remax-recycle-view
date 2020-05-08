@@ -15,10 +15,7 @@ import {
   getSystemInfoSync as ttGetSystemInfoSync,
 } from 'remax/toutiao';
 
-let ScrollViewWrapper:
-  | typeof AliScrollView
-  | typeof TtScrollView
-  | typeof WechatScrollView = WechatScrollView;
+let ScrollViewWrapper: typeof AliScrollView | typeof TtScrollView | typeof WechatScrollView;
 
 if (process.env.REMAX_PLATFORM === 'ali') {
   ScrollViewWrapper = AliScrollView;
@@ -46,18 +43,18 @@ const ScrollViewRender: React.ForwardRefRenderFunction<any, ScrollViewProps> = (
 export const ScrollView = React.forwardRef(ScrollViewRender);
 
 function getSystemInfo() {
-  switch (process.env.REMAX_PLATFORM) {
-    case 'wechat':
-      return wechatGetSystemInfoSync();
-    case 'toutiao':
-      return ttGetSystemInfoSync();
-    case 'ali':
-      return aliGetSystemInfoSync();
-    /* istanbul ignore next */
-    // this case has been thrown before
-    default:
-      throw new Error(`current platform ${process.env.REMAX_PLATFORM} is unknown`);
+  if (process.env.REMAX_PLATFORM === 'ali') {
+    return aliGetSystemInfoSync();
   }
+  if (process.env.REMAX_PLATFORM === 'wechat') {
+    return wechatGetSystemInfoSync();
+  }
+  if (process.env.REMAX_PLATFORM === 'toutiao') {
+    return ttGetSystemInfoSync();
+  }
+  /* istanbul ignore next */
+  // this case has been thrown before
+  throw new Error(`current platform ${process.env.REMAX_PLATFORM} is unknown`);
 }
 
 type SystemInfo =

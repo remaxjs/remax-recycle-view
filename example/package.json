@@ -1,0 +1,24 @@
+{
+  "name": "example",
+  "private": true,
+  "version": "1.0.0",
+  "description": "example for recycle-view",
+  "main": "index.js",
+  "keywords": [],
+  "author": "ahungrynoob <dxd_sjtu@outlook.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "remax build -w -t",
+    "build": "cross-env NODE_ENV=production remax build -t"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "remax": "^2.0.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "@types/react": "^16.9.16",
+    "typescript": "^3.7.3"
+  }
+}

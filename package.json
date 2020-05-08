@@ -39,14 +39,17 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@testing-library/react-hooks": "^3.2.1",
     "@types/jest": "^25.2.1",
     "@types/react": "^16.9.34",
+    "@types/sinon": "^9.0.0",
     "@umijs/fabric": "^2.0.8",
     "check-prettier": "^1.0.3",
     "father": "^2.29.3",
     "prettier": "^1.19.1",
     "react": "^16.13.1",
     "remax": "^2.0.1",
+    "sinon": "^9.0.2",
     "standard-version": "^7.1.0"
   }
 }
