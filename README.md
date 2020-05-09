@@ -70,8 +70,6 @@ export default () => {
 
 ## API
 
-renderItem: ;
-
 | 属性名 | 类型 | 必填 | 默认值 | 描述 |
 | --- | --- | --- | --- | --- |
 | className | string | 否 | 无 | class 样式名称 |
