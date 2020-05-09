@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { View } from 'remax/one';
 import RecycleView from '../../../../src/index';
 import styles from './index.css';
