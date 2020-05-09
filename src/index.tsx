@@ -83,6 +83,7 @@ const RecycleView: React.ForwardRefRenderFunction<any, IRecycleProps & ScrollVie
   return (
     <ScrollView
       {...scrollViewProps}
+      scrollY
       ref={ref}
       onScroll={(e: any) => {
         handleScroll(e);

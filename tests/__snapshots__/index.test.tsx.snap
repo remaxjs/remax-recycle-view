@@ -75,6 +75,7 @@ Object {
       "id": 18,
       "props": Object {
         "onScroll": "$$REMAX_METHOD_18_onScroll",
+        "scrollY": true,
       },
       "text": undefined,
       "type": "scroll-view",
@@ -115,6 +116,7 @@ Object {
       "id": 3,
       "props": Object {
         "onScroll": "$$REMAX_METHOD_3_onScroll",
+        "scrollY": true,
       },
       "text": undefined,
       "type": "scroll-view",
@@ -155,6 +157,7 @@ Object {
       "id": 9,
       "props": Object {
         "onScroll": "$$REMAX_METHOD_9_onScroll",
+        "scrollY": true,
       },
       "text": undefined,
       "type": "scroll-view",
@@ -197,6 +200,7 @@ Object {
         "lowerThreshold": 50,
         "onScroll": "$$REMAX_METHOD_6_onScroll",
         "scrollTop": undefined,
+        "scrollY": true,
         "upperThreshold": 50,
       },
       "text": undefined,
@@ -308,6 +312,7 @@ Object {
       "id": 30,
       "props": Object {
         "onScroll": "$$REMAX_METHOD_30_onScroll",
+        "scrollY": true,
       },
       "text": undefined,
       "type": "scroll-view",
