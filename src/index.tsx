@@ -100,7 +100,7 @@ const RecycleView: React.ForwardRefRenderFunction<any, IRecycleProps & ScrollVie
           position: 'relative',
           height: LIST_HEIGHT,
           background: placeholderImage && `url("${placeholderImage}") repeat-y`,
-          backgroundSize: 'contain',
+          backgroundSize: placeholderImage && 'contain',
         }}
       >
         <View style={{ position: 'absolute', left: 0, width: '100%', top: innerBeforeHeight }}>

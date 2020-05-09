@@ -49,11 +49,14 @@ function getSystemInfo() {
   if (process.env.REMAX_PLATFORM === 'wechat') {
     return wechatGetSystemInfoSync();
   }
+
+  /* istanbul ignore else */
   if (process.env.REMAX_PLATFORM === 'toutiao') {
     return ttGetSystemInfoSync();
   }
-  /* istanbul ignore next */
+
   // this case has been thrown before
+  /* istanbul ignore next */
   throw new Error(`current platform ${process.env.REMAX_PLATFORM} is unknown`);
 }
 
