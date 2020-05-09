@@ -1,31 +1,7 @@
 .app {
-  padding: 0 24px;
   text-align: center;
 }
 
-.logo {
-  width: 240px;
-  height: 240px;
-  animation: logo-spin infinite 20s linear;
-  pointer-events: none;
-}
-
-.text {
-  margin-top: 64px;
-}
-
-.header {
-  padding-top: 30%;
-  color: white;
-  font-size: 40px;
-  background-color: #282c34;
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.recycleView {
+  height: 100vh;
 }
