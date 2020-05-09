@@ -16,7 +16,6 @@
 <div align=center>
 	<img src="https://github.com/remaxjs/remax-recycle-view/blob/master/example.gif?raw=true" />
 </div>
-
 ---
 
 ## Install
