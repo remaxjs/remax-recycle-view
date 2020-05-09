@@ -12,6 +12,7 @@
     "build": "father build",
     "test": "father test",
     "ci": "father test --coverage",
+    "prepublishOnly": "npm run ci && npm run build",
     "release": "standard-version",
     "lint": "npm run lint:js && npm run lint:style && npm run lint:prettier",
     "lint:js": "eslint src/ --ext .ts,.tsx,.jsx,.js,.md",
