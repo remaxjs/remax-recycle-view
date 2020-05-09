@@ -66,7 +66,7 @@ Object {
           ],
           "id": 17,
           "props": Object {
-            "style": "position:relative;height:200rpx;background:undefined;background-size:contain;",
+            "style": "position:relative;height:200rpx;background:undefined;background-size:undefined;",
           },
           "text": undefined,
           "type": "view",
@@ -107,7 +107,7 @@ Object {
           ],
           "id": 2,
           "props": Object {
-            "style": "position:relative;height:0rpx;background:undefined;background-size:contain;",
+            "style": "position:relative;height:0rpx;background:undefined;background-size:undefined;",
           },
           "text": undefined,
           "type": "view",
@@ -148,7 +148,7 @@ Object {
           ],
           "id": 8,
           "props": Object {
-            "style": "position:relative;height:0rpx;background:undefined;background-size:contain;",
+            "style": "position:relative;height:0rpx;background:undefined;background-size:undefined;",
           },
           "text": undefined,
           "type": "view",
@@ -189,7 +189,7 @@ Object {
           ],
           "id": 5,
           "props": Object {
-            "style": "position:relative;height:0rpx;background:undefined;background-size:contain;",
+            "style": "position:relative;height:0rpx;background:undefined;background-size:undefined;",
           },
           "text": undefined,
           "type": "view",
