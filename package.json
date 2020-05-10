@@ -35,7 +35,7 @@
   "homepage": "https://github.com/remaxjs/remax-recycle-view#readme",
   "peerDependencies": {
     "react": "^16.13.1",
-    "remax": "^1.21.6"
+    "remax": "^2.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
