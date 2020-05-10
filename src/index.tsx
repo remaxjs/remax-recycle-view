@@ -78,6 +78,10 @@ const RecycleView: React.ForwardRefRenderFunction<any, IRecycleProps & ScrollVie
     setRange(offset);
   }, 100);
 
+  React.useEffect(() => {
+    return handleScroll.cancel;
+  }, []);
+
   const innerBeforeHeight = (sizeData[start] && sizeData[start].offsetTop) || 0;
 
   return (
