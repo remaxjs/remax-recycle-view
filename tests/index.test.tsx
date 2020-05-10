@@ -1,8 +1,6 @@
 /* eslint-disable global-require */
 import React from 'react';
-import { render } from 'remax';
 import renderer from 'react-test-renderer';
-import AppContainer from 'remax/esm/AppContainer';
 
 const ENV = ['ali', 'wechat', 'toutiao'];
 
@@ -16,9 +14,8 @@ describe('src/index.tsx', () => {
       jest.isolateModules(() => {
         process.env.REMAX_PLATFORM = platform;
         const RecycleView = require('../src/index').default;
-        const container = new AppContainer({});
-        render(<RecycleView renderItem={() => <div>hello</div>} />, container);
-        expect(container.root.toJSON()).toMatchSnapshot();
+        const component = renderer.create(<RecycleView renderItem={() => <div>hello</div>} />);
+        expect(component.toJSON()).toMatchSnapshot();
       });
     });
   });
@@ -26,15 +23,13 @@ describe('src/index.tsx', () => {
   it(`should render correct LIST_HEIGHT 200rpx`, () => {
     jest.isolateModules(() => {
       const RecycleView = require('../src/index').default;
-      const container = new AppContainer({});
-      render(
+      const component = renderer.create(
         <RecycleView
           data={[{ height: 100 }, { height: 100 }]}
           renderItem={() => <div>hello</div>}
         />,
-        container,
       );
-      expect(container.root.toJSON()).toMatchSnapshot();
+      expect(component.toJSON()).toMatchSnapshot();
     });
   });
 
@@ -48,8 +43,7 @@ describe('src/index.tsx', () => {
   it('should render placeholder-image, header and bottom', () => {
     jest.isolateModules(() => {
       const RecycleView = require('../src/index').default;
-      const container = new AppContainer({});
-      render(
+      const component = renderer.create(
         <RecycleView
           headerHeight={50}
           bottomHeight={50}
@@ -59,9 +53,8 @@ describe('src/index.tsx', () => {
           data={[{ height: 100 }]}
           renderItem={() => <div>hello</div>}
         />,
-        container,
       );
-      expect(container.root.toJSON()).toMatchSnapshot();
+      expect(component.toJSON()).toMatchSnapshot();
     });
   });
 
