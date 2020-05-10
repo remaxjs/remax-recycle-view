@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-alpha.2](https://github.com/remaxjs/remax-recycle-view/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2020-05-10)
+
+
+### Bug Fixes
+
+* pkg.peerDependencies ([35d5794](https://github.com/remaxjs/remax-recycle-view/commit/35d5794d9f376ab5375d4cb4bb3c7b81e6f077f2))
+
 ## 1.0.0-alpha.1 (2020-05-09)
 
 
