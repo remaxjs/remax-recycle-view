@@ -3,10 +3,7 @@ interface Throttled<T extends (...args: any) => any> {
   cancel(): void;
 }
 
-export function throttle<T extends (...args: any) => any>(
-  func: T,
-  wait: number,
-): Throttled<T>  {
+export function throttle<T extends (...args: any) => any>(func: T, wait: number): Throttled<T> {
   let previous = 0;
   let time: ReturnType<typeof setTimeout> | undefined;
   let remaining;
@@ -34,7 +31,7 @@ export function throttle<T extends (...args: any) => any>(
     if (time) {
       clearTimeout(time);
     }
-  }
+  };
 
   return throttled;
 }

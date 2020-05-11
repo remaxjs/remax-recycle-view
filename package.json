@@ -17,7 +17,21 @@
     "lint": "npm run lint:js && npm run lint:style && npm run lint:prettier",
     "lint:js": "eslint src/ --ext .ts,.tsx,.jsx,.js,.md",
     "lint:style": "stylelint --fix \"**/*.css\" --syntax css",
-    "lint:prettier": "check-prettier lint"
+    "lint:prettier": "check-prettier lint",
+    "lint-staged": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.css": "npm run lint:style",
+    "**/*.{tsx,ts,jsx,js,md,json}": [
+      "prettier --write",
+      "git add"
+    ],
+    "**/*(!.d).{ts,tsx,js,jsx}": "npm run lint-staged:js"
   },
   "repository": {
     "type": "git",
@@ -47,6 +61,8 @@
     "@umijs/fabric": "^2.0.8",
     "check-prettier": "^1.0.3",
     "father": "^2.29.3",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
     "prettier": "^1.19.1",
     "react": "^16.13.1",
     "react-test-renderer": "^16.13.1",
