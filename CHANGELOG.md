@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/remaxjs/remax-recycle-view/compare/v1.0.0...v1.0.1) (2020-05-11)
+
+
+### Bug Fixes
+
+* invocation is not canceled when component unmount ([#11](https://github.com/remaxjs/remax-recycle-view/issues/11)) ([0cd7eda](https://github.com/remaxjs/remax-recycle-view/commit/0cd7eda4885d30c950c9cdfb62422c9589ce12e4))
+* useMemo for handle scroll ([#13](https://github.com/remaxjs/remax-recycle-view/issues/13)) ([0100baa](https://github.com/remaxjs/remax-recycle-view/commit/0100baa217dded51b3afb21be7a05d9c81efba8a))
+
 ## [1.0.0](https://github.com/remaxjs/remax-recycle-view/compare/v1.0.0-alpha.2...v1.0.0) (2020-05-10)
 
 ## [1.0.0-alpha.2](https://github.com/remaxjs/remax-recycle-view/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2020-05-10)
