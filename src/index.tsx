@@ -57,30 +57,34 @@ const RecycleView: React.ForwardRefRenderFunction<any, IRecycleProps & ScrollVie
 
   const visibleData = React.useMemo(() => data.filter(isVisible(start, end)), [data, start, end]);
 
-  const handleScroll = throttle(function(event: any) {
-    const { scrollTop, scrollHeight } = event.detail;
+  const handleScroll = React.useMemo(
+    () =>
+      throttle(function(event: any) {
+        const { scrollTop, scrollHeight } = event.detail;
 
-    const ratio = scrollTop / scrollHeight;
+        const ratio = scrollTop / scrollHeight;
 
-    const initialOffsetTop = headerHeight;
-    const totalHeight = LIST_HEIGHT + bottomHeight;
+        const initialOffsetTop = headerHeight;
+        const totalHeight = LIST_HEIGHT + bottomHeight;
 
-    let offset = 0;
-    for (let i = 0; i < sizeData.length; i++) {
-      const { offsetTop } = sizeData[i];
-      const totalOffsetTop = initialOffsetTop + offsetTop;
-      if (totalOffsetTop / totalHeight >= ratio) {
-        offset = i;
-        break;
-      }
-    }
+        let offset = 0;
+        for (let i = 0; i < sizeData.length; i++) {
+          const { offsetTop } = sizeData[i];
+          const totalOffsetTop = initialOffsetTop + offsetTop;
+          if (totalOffsetTop / totalHeight >= ratio) {
+            offset = i;
+            break;
+          }
+        }
 
-    setRange(offset);
-  }, 100);
+        setRange(offset);
+      }, 100),
+    [headerHeight, LIST_HEIGHT, bottomHeight, sizeData],
+  );
 
   React.useEffect(() => {
     return handleScroll.cancel;
-  }, []);
+  }, [handleScroll]);
 
   const innerBeforeHeight = (sizeData[start] && sizeData[start].offsetTop) || 0;
 
