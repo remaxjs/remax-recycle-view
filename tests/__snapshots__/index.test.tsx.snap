@@ -1,326 +1,210 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`src/index.tsx should render correct LIST_HEIGHT 200rpx 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
+<scroll-view
+  onScroll={[Function]}
+  scrollY={true}
+>
+  <view
+    style={
+      Object {
+        "background": undefined,
+        "backgroundSize": undefined,
+        "height": 200,
+        "position": "relative",
+      }
+    }
+  >
+    <view
+      style={
         Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
-                  "children": Array [
-                    Object {
-                      "children": Array [
-                        Object {
-                          "text": "hello",
-                          "type": "plain-text",
-                        },
-                      ],
-                      "id": 11,
-                      "props": Object {},
-                      "text": undefined,
-                      "type": "div",
-                    },
-                  ],
-                  "id": 12,
-                  "props": Object {
-                    "class": "recycle-view-item",
-                    "style": "height:100rpx;",
-                  },
-                  "text": undefined,
-                  "type": "view",
-                },
-                Object {
-                  "children": Array [
-                    Object {
-                      "children": Array [
-                        Object {
-                          "text": "hello",
-                          "type": "plain-text",
-                        },
-                      ],
-                      "id": 14,
-                      "props": Object {},
-                      "text": undefined,
-                      "type": "div",
-                    },
-                  ],
-                  "id": 15,
-                  "props": Object {
-                    "class": "recycle-view-item",
-                    "style": "height:100rpx;",
-                  },
-                  "text": undefined,
-                  "type": "view",
-                },
-              ],
-              "id": 16,
-              "props": Object {
-                "style": "position:absolute;left:0rpx;width:100%;top:0rpx;",
-              },
-              "text": undefined,
-              "type": "view",
-            },
-          ],
-          "id": 17,
-          "props": Object {
-            "style": "position:relative;height:200rpx;background:undefined;background-size:undefined;",
-          },
-          "text": undefined,
-          "type": "view",
-        },
-      ],
-      "id": 18,
-      "props": Object {
-        "onScroll": "$$REMAX_METHOD_18_onScroll",
-        "scrollY": true,
-      },
-      "text": undefined,
-      "type": "scroll-view",
-    },
-  ],
-  "id": 3,
-  "props": undefined,
-  "text": undefined,
-  "type": "root",
-}
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": "100%",
+        }
+      }
+    >
+      <view
+        className="recycle-view-item"
+        style={
+          Object {
+            "height": 100,
+          }
+        }
+      >
+        <div>
+          hello
+        </div>
+      </view>
+      <view
+        className="recycle-view-item"
+        style={
+          Object {
+            "height": 100,
+          }
+        }
+      >
+        <div>
+          hello
+        </div>
+      </view>
+    </view>
+  </view>
+</scroll-view>
 `;
 
 exports[`src/index.tsx should render correctly in platform ali 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
+<scroll-view
+  onScroll={[Function]}
+  scrollY={true}
+>
+  <view
+    style={
+      Object {
+        "background": undefined,
+        "backgroundSize": undefined,
+        "height": 0,
+        "position": "relative",
+      }
+    }
+  >
+    <view
+      style={
         Object {
-          "children": Array [
-            Object {
-              "children": Array [],
-              "id": 1,
-              "props": Object {
-                "style": "position:absolute;left:0rpx;width:100%;top:0rpx;",
-              },
-              "text": undefined,
-              "type": "view",
-            },
-          ],
-          "id": 2,
-          "props": Object {
-            "style": "position:relative;height:0rpx;background:undefined;background-size:undefined;",
-          },
-          "text": undefined,
-          "type": "view",
-        },
-      ],
-      "id": 3,
-      "props": Object {
-        "onScroll": "$$REMAX_METHOD_3_onScroll",
-        "scrollY": true,
-      },
-      "text": undefined,
-      "type": "scroll-view",
-    },
-  ],
-  "id": 0,
-  "props": undefined,
-  "text": undefined,
-  "type": "root",
-}
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": "100%",
+        }
+      }
+    />
+  </view>
+</scroll-view>
 `;
 
 exports[`src/index.tsx should render correctly in platform toutiao 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
+<scroll-view
+  onScroll={[Function]}
+  scrollY={true}
+>
+  <view
+    style={
+      Object {
+        "background": undefined,
+        "backgroundSize": undefined,
+        "height": 0,
+        "position": "relative",
+      }
+    }
+  >
+    <view
+      style={
         Object {
-          "children": Array [
-            Object {
-              "children": Array [],
-              "id": 7,
-              "props": Object {
-                "style": "position:absolute;left:0rpx;width:100%;top:0rpx;",
-              },
-              "text": undefined,
-              "type": "view",
-            },
-          ],
-          "id": 8,
-          "props": Object {
-            "style": "position:relative;height:0rpx;background:undefined;background-size:undefined;",
-          },
-          "text": undefined,
-          "type": "view",
-        },
-      ],
-      "id": 9,
-      "props": Object {
-        "onScroll": "$$REMAX_METHOD_9_onScroll",
-        "scrollY": true,
-      },
-      "text": undefined,
-      "type": "scroll-view",
-    },
-  ],
-  "id": 2,
-  "props": undefined,
-  "text": undefined,
-  "type": "root",
-}
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": "100%",
+        }
+      }
+    />
+  </view>
+</scroll-view>
 `;
 
 exports[`src/index.tsx should render correctly in platform wechat 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
+<scroll-view
+  lowerThreshold={50}
+  onScroll={[Function]}
+  scrollY={true}
+  upperThreshold={50}
+>
+  <view
+    style={
+      Object {
+        "background": undefined,
+        "backgroundSize": undefined,
+        "height": 0,
+        "position": "relative",
+      }
+    }
+  >
+    <view
+      style={
         Object {
-          "children": Array [
-            Object {
-              "children": Array [],
-              "id": 4,
-              "props": Object {
-                "style": "position:absolute;left:0rpx;width:100%;top:0rpx;",
-              },
-              "text": undefined,
-              "type": "view",
-            },
-          ],
-          "id": 5,
-          "props": Object {
-            "style": "position:relative;height:0rpx;background:undefined;background-size:undefined;",
-          },
-          "text": undefined,
-          "type": "view",
-        },
-      ],
-      "id": 6,
-      "props": Object {
-        "lowerThreshold": 50,
-        "onScroll": "$$REMAX_METHOD_6_onScroll",
-        "scrollTop": undefined,
-        "scrollY": true,
-        "upperThreshold": 50,
-      },
-      "text": undefined,
-      "type": "scroll-view",
-    },
-  ],
-  "id": 1,
-  "props": undefined,
-  "text": undefined,
-  "type": "root",
-}
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": "100%",
+        }
+      }
+    />
+  </view>
+</scroll-view>
 `;
 
 exports[`src/index.tsx should render placeholder-image, header and bottom 1`] = `
-Object {
-  "children": Array [
-    Object {
-      "children": Array [
+<scroll-view
+  onScroll={[Function]}
+  scrollY={true}
+>
+  <view
+    className="recycle-view-header"
+    style={
+      Object {
+        "height": 50,
+      }
+    }
+  >
+    <div>
+      header
+    </div>
+  </view>
+  <view
+    style={
+      Object {
+        "background": "url(\\"https://via.placeholder.com/150\\") repeat-y",
+        "backgroundSize": "contain",
+        "height": 100,
+        "position": "relative",
+      }
+    }
+  >
+    <view
+      style={
         Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
-                  "text": "header",
-                  "type": "plain-text",
-                },
-              ],
-              "id": 20,
-              "props": Object {},
-              "text": undefined,
-              "type": "div",
-            },
-          ],
-          "id": 21,
-          "props": Object {
-            "class": "recycle-view-header",
-            "style": "height:50rpx;",
-          },
-          "text": undefined,
-          "type": "view",
-        },
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
-                  "children": Array [
-                    Object {
-                      "children": Array [
-                        Object {
-                          "text": "hello",
-                          "type": "plain-text",
-                        },
-                      ],
-                      "id": 23,
-                      "props": Object {},
-                      "text": undefined,
-                      "type": "div",
-                    },
-                  ],
-                  "id": 24,
-                  "props": Object {
-                    "class": "recycle-view-item",
-                    "style": "height:100rpx;",
-                  },
-                  "text": undefined,
-                  "type": "view",
-                },
-              ],
-              "id": 25,
-              "props": Object {
-                "style": "position:absolute;left:0rpx;width:100%;top:0rpx;",
-              },
-              "text": undefined,
-              "type": "view",
-            },
-          ],
-          "id": 26,
-          "props": Object {
-            "style": "position:relative;height:100rpx;background:url(\\"https://via.placeholder.com/150\\") repeat-y;background-size:contain;",
-          },
-          "text": undefined,
-          "type": "view",
-        },
-        Object {
-          "children": Array [
-            Object {
-              "children": Array [
-                Object {
-                  "text": "bottom",
-                  "type": "plain-text",
-                },
-              ],
-              "id": 28,
-              "props": Object {},
-              "text": undefined,
-              "type": "div",
-            },
-          ],
-          "id": 29,
-          "props": Object {
-            "class": "recycle-view-bottom",
-            "style": "height:50rpx;",
-          },
-          "text": undefined,
-          "type": "view",
-        },
-      ],
-      "id": 30,
-      "props": Object {
-        "onScroll": "$$REMAX_METHOD_30_onScroll",
-        "scrollY": true,
-      },
-      "text": undefined,
-      "type": "scroll-view",
-    },
-  ],
-  "id": 4,
-  "props": undefined,
-  "text": undefined,
-  "type": "root",
-}
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": "100%",
+        }
+      }
+    >
+      <view
+        className="recycle-view-item"
+        style={
+          Object {
+            "height": 100,
+          }
+        }
+      >
+        <div>
+          hello
+        </div>
+      </view>
+    </view>
+  </view>
+  <view
+    className="recycle-view-bottom"
+    style={
+      Object {
+        "height": 50,
+      }
+    }
+  >
+    <div>
+      bottom
+    </div>
+  </view>
+</scroll-view>
 `;
