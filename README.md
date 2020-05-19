@@ -19,8 +19,11 @@
   <a>
 </div>
 
-[Live Demo](https://herbox-embed.alipay.com/p/Remax/remax-recycle-view)
-
+<div align=center>
+  <a href="https://herbox-embed.alipay.com/p/Remax/remax-recycle-view" target="_blank">
+    Live Demo
+  <a>
+</div>
 ---
 
 ## Install
