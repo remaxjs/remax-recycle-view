@@ -4,3 +4,4 @@ coverage
 tmp.json
 .tea
 yarn.lock
+.env

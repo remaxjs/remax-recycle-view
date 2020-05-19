@@ -14,8 +14,12 @@
 利用虚拟滚动技术的长列表组件，解决了长列表渲染的性能问题。
 
 <div align=center>
-	<img src="https://github.com/remaxjs/remax-recycle-view/blob/master/example.gif?raw=true" />
+  <a href="https://herbox-embed.alipay.com/p/Remax/remax-recycle-view" target="_blank">
+	  <img src="https://github.com/remaxjs/remax-recycle-view/blob/master/example.gif?raw=true" />
+  <a>
 </div>
+
+[Live Demo](https://herbox-embed.alipay.com/p/Remax/remax-recycle-view)
 
 ---
 
