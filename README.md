@@ -24,7 +24,6 @@
     Live Demo
   <a>
 </div>
----
 
 ## Install
 
