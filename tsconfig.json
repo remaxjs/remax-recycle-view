@@ -2,12 +2,11 @@
   "compilerOptions": {
     "declaration": true,
     "strict": true,
-    "outDir": "buld/dist",
-    "target": "es5",
+    "outDir": "./lib",
+    "target": "esnext",
     "module": "esnext",
     "lib": ["es2015", "dom"],
-    "sourceMap": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
@@ -17,7 +16,8 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "noImplicitThis": false,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "skipLibCheck": true
   },
   "include": ["./src"]
 }

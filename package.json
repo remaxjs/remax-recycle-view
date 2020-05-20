@@ -2,14 +2,14 @@
   "name": "remax-recycle-view",
   "version": "1.0.2",
   "description": "recycle-view component for remax",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
-    "dist"
+    "lib"
   ],
   "scripts": {
-    "build": "father build",
+    "build": "rimraf lib && tsc",
     "test": "father test",
     "ci": "father test --coverage",
     "prepublishOnly": "npm run ci && npm run build",
@@ -67,6 +67,7 @@
     "react": "^16.13.1",
     "react-test-renderer": "^16.13.1",
     "remax": "^2.0.1",
+    "rimraf": "^3.0.2",
     "sinon": "^9.0.2",
     "standard-version": "^7.1.0"
   }
