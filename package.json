@@ -1,6 +1,6 @@
 {
   "name": "remax-recycle-view",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "recycle-view component for remax",
   "main": "lib/index.js",
   "module": "lib/index.js",
