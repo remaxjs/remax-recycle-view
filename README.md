@@ -36,7 +36,7 @@ $ npm i remax-recycle-view --save
 ```tsx
 import React from 'react';
 import { View } from 'remax/one';
-import RecycleView from '../../../../src/index';
+import RecycleView from 'remax-recycle-view/lib/index'; // 重要，由于remax的跨平台同构特性，需要这样引入
 import styles from './index.css';
 
 const mockData: { height: number; [key: string]: any }[] = [];
