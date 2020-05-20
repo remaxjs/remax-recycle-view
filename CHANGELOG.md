@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/remaxjs/remax-recycle-view/compare/v1.0.1...v1.0.2) (2020-05-20)
+
+
+### Bug Fixes
+
+* add platform suffix ([#17](https://github.com/remaxjs/remax-recycle-view/issues/17)) ([29a5c6f](https://github.com/remaxjs/remax-recycle-view/commit/29a5c6fa31979309ecd588460e4a4511cd7666c2))
+
 ### [1.0.1](https://github.com/remaxjs/remax-recycle-view/compare/v1.0.0...v1.0.1) (2020-05-11)
 
 
