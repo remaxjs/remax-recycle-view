@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from 'react';
-import { ScrollView as AliScrollView, ScrollViewProps, getSystemInfoSync } from 'remax/ali';
+import { ScrollView as ToutiaoScrollView, ScrollViewProps, getSystemInfoSync } from 'remax/toutiao';
 
-export type { ScrollViewProps } from 'remax/ali';
+export type { ScrollViewProps } from 'remax/toutiao';
 
 const ScrollViewRender: React.ForwardRefRenderFunction<any, PropsWithChildren<ScrollViewProps>> = (
   props,
@@ -9,9 +9,9 @@ const ScrollViewRender: React.ForwardRefRenderFunction<any, PropsWithChildren<Sc
 ) => {
   const { children, ...scrollViewProps } = props;
   return (
-    <AliScrollView {...scrollViewProps} ref={ref}>
+    <ToutiaoScrollView {...scrollViewProps} ref={ref}>
       {children}
-    </AliScrollView>
+    </ToutiaoScrollView>
   );
 };
 

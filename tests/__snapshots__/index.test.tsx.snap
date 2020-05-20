@@ -1,5 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`src/index.tsx should render correct LIST_HEIGHT 0rpx when no data 1`] = `
+<scroll-view
+  onScroll={[Function]}
+  scrollY={true}
+>
+  <view
+    style={
+      Object {
+        "background": undefined,
+        "backgroundSize": undefined,
+        "height": 0,
+        "position": "relative",
+      }
+    }
+  >
+    <view
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": "100%",
+        }
+      }
+    />
+  </view>
+</scroll-view>
+`;
+
 exports[`src/index.tsx should render correct LIST_HEIGHT 200rpx 1`] = `
 <scroll-view
   onScroll={[Function]}
@@ -50,95 +79,6 @@ exports[`src/index.tsx should render correct LIST_HEIGHT 200rpx 1`] = `
         </div>
       </view>
     </view>
-  </view>
-</scroll-view>
-`;
-
-exports[`src/index.tsx should render correctly in platform ali 1`] = `
-<scroll-view
-  onScroll={[Function]}
-  scrollY={true}
->
-  <view
-    style={
-      Object {
-        "background": undefined,
-        "backgroundSize": undefined,
-        "height": 0,
-        "position": "relative",
-      }
-    }
-  >
-    <view
-      style={
-        Object {
-          "left": 0,
-          "position": "absolute",
-          "top": 0,
-          "width": "100%",
-        }
-      }
-    />
-  </view>
-</scroll-view>
-`;
-
-exports[`src/index.tsx should render correctly in platform toutiao 1`] = `
-<scroll-view
-  onScroll={[Function]}
-  scrollY={true}
->
-  <view
-    style={
-      Object {
-        "background": undefined,
-        "backgroundSize": undefined,
-        "height": 0,
-        "position": "relative",
-      }
-    }
-  >
-    <view
-      style={
-        Object {
-          "left": 0,
-          "position": "absolute",
-          "top": 0,
-          "width": "100%",
-        }
-      }
-    />
-  </view>
-</scroll-view>
-`;
-
-exports[`src/index.tsx should render correctly in platform wechat 1`] = `
-<scroll-view
-  lowerThreshold={50}
-  onScroll={[Function]}
-  scrollY={true}
-  upperThreshold={50}
->
-  <view
-    style={
-      Object {
-        "background": undefined,
-        "backgroundSize": undefined,
-        "height": 0,
-        "position": "relative",
-      }
-    }
-  >
-    <view
-      style={
-        Object {
-          "left": 0,
-          "position": "absolute",
-          "top": 0,
-          "width": "100%",
-        }
-      }
-    />
   </view>
 </scroll-view>
 `;

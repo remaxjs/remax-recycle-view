@@ -2,21 +2,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-const ENV = ['ali', 'wechat', 'toutiao'];
-
-beforeEach(() => {
-  process.env.REMAX_PLATFORM = 'ali';
-});
-
 describe('src/index.tsx', () => {
-  ENV.forEach(platform => {
-    it(`should render correctly in platform ${platform}`, () => {
-      jest.isolateModules(() => {
-        process.env.REMAX_PLATFORM = platform;
-        const RecycleView = require('../src/index').default;
-        const component = renderer.create(<RecycleView renderItem={() => <div>hello</div>} />);
-        expect(component.toJSON()).toMatchSnapshot();
-      });
+  it(`should render correct LIST_HEIGHT 0rpx when no data`, () => {
+    jest.isolateModules(() => {
+      const RecycleView = require('../src/index').default;
+      const component = renderer.create(<RecycleView renderItem={() => <div>hello</div>} />);
+      expect(component.toJSON()).toMatchSnapshot();
     });
   });
 
@@ -30,13 +21,6 @@ describe('src/index.tsx', () => {
         />,
       );
       expect(component.toJSON()).toMatchSnapshot();
-    });
-  });
-
-  it('should throw error when platform is unknown', () => {
-    jest.isolateModules(() => {
-      process.env.REMAX_PLATFORM = 'x';
-      expect(() => require('../src/index')).toThrow('current platform x is unknown');
     });
   });
 

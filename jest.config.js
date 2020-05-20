@@ -14,6 +14,6 @@ module.exports = {
     ],
   },
   transformIgnorePatterns: ['node_modules/(?!(.*remax.*))'],
-  coveragePathIgnorePatterns: ['/node_modules/', '/example/'],
+  coveragePathIgnorePatterns: ['/node_modules/', '/example/', '/src/remax.*.tsx'],
   setupFiles: ['./tests/setup.js'],
 };
