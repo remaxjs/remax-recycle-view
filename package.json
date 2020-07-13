@@ -69,6 +69,6 @@
     "remax": "^2.0.1",
     "rimraf": "^3.0.2",
     "sinon": "^9.0.2",
-    "standard-version": "^7.1.0"
+    "standard-version": "^8.0.1"
   }
 }
