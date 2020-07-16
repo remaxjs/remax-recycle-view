@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'remax/one';
 import { ScrollView, ScrollViewProps } from './remax';
-import { useVisibleRange, useSizeData } from './hooks';
+import { useVisibleRange, useSizeData, useScrollTop } from './hooks';
 import { throttle } from './utils';
 
 const DEFAULT_OVERSCAN_COUNT = 5;
@@ -14,6 +14,7 @@ export type Item = {
 
 interface IRecycleProps {
   data?: Item[];
+  scrollTopByIndex?: number;
   overscanCount?: number;
   placeholderImage?: string;
   headerHeight?: number;
@@ -40,6 +41,8 @@ const RecycleView: React.ForwardRefRenderFunction<any, IRecycleProps & ScrollVie
     bottomHeight = 0,
     renderItem,
     onScroll,
+    scrollTop,
+    scrollTopByIndex,
     ...scrollViewProps
   } = props;
 
@@ -54,6 +57,8 @@ const RecycleView: React.ForwardRefRenderFunction<any, IRecycleProps & ScrollVie
   );
 
   const sizeData = useSizeData(data);
+
+  const currentScrollTop = useScrollTop({ scrollTopByIndex, scrollTop, sizeData });
 
   const visibleData = React.useMemo(() => data.filter(isVisible(start, end)), [data, start, end]);
 
@@ -97,6 +102,7 @@ const RecycleView: React.ForwardRefRenderFunction<any, IRecycleProps & ScrollVie
         handleScroll(e);
         onScroll && onScroll(e);
       }}
+      scrollTop={currentScrollTop}
     >
       {renderHeader && (
         <View className="recycle-view-header" style={{ height: headerHeight }}>

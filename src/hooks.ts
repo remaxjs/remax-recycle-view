@@ -37,3 +37,23 @@ export function useSizeData(data: Item[]) {
     });
   }, [data]);
 }
+
+/**
+ * set scroll top according to scrollTopByIndex prop (prior to scrollTop prop)
+ */
+export function useScrollTop({
+  scrollTopByIndex,
+  sizeData,
+  scrollTop,
+}: {
+  scrollTopByIndex?: number;
+  sizeData: ReturnType<typeof useSizeData>;
+  scrollTop?: number;
+}) {
+  return React.useMemo(() => {
+    if (scrollTopByIndex !== undefined) {
+      scrollTop = sizeData[scrollTopByIndex].offsetTop;
+    }
+    return scrollTop;
+  }, [scrollTopByIndex, sizeData, scrollTop]);
+}
