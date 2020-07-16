@@ -82,6 +82,7 @@ export default () => {
 | className | string | 否 | 无 | class 样式名称 |
 | style | React.CSSProperties | 否 | 无 | React 行内样式 |
 | data | {height: number; [key:string]: any}[] | 否 | [] | 需要渲染的长列表数据(每条数据必须要有 height 表示高度) |
+| scrollTopByIndex | number | 否 | 无 | 值应为某子元素在 data 中的 index，则滚动到该元素，元素顶部对齐滚动区域顶部。 |
 | overscanCount | number | 否 | 5 | 预渲染的个数(会渲染当前视口的前 overscanCount 个,和后 2 \* overscanCount 个) |
 | placeholderImage | string | 否 | 无 | 对于来不及渲染的元素，可以用一个图片地址来作为背景 |
 | headerHeight | number | 否 | 0 | 如果有 renderHeader 属性方法，则必须要有 headerHeight 表示头部的高度 |

@@ -15,6 +15,7 @@ export default () => {
   return (
     <View className={styles.app}>
       <RecycleView
+        scrollTopByIndex={3}
         className={styles.recycleView}
         placeholderImage="https://gw.alicdn.com/tfs/TB18fUJCxD1gK0jSZFyXXciOVXa-750-656.png"
         data={mockData}

@@ -1,5 +1,5 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import { useVisibleRange, useSizeData } from '../src/hooks';
+import { useVisibleRange, useSizeData, useScrollTop } from '../src/hooks';
 
 describe('src/hooks.tsx', () => {
   it('should return correct start and end', () => {
@@ -34,5 +34,34 @@ describe('src/hooks.tsx', () => {
       { height: 20, __index__: 1 },
       { height: 30, __index__: 2 },
     ]);
+  });
+
+  it('should return correct offsetTop when scrollTopByIndex is valid', () => {
+    const mockData = [
+      { height: 10, offsetTop: 0 },
+      { height: 20, offsetTop: 10 },
+      { height: 30, offsetTop: 30 },
+    ];
+
+    const { result } = renderHook(
+      ({ data }) => useScrollTop({ scrollTopByIndex: 1, sizeData: data, scrollTop: 100 }),
+      {
+        initialProps: { data: mockData },
+      },
+    );
+    expect(result.current).toBe(10);
+  });
+
+  it('should return correct scrollTop prop when scrollTopByIndex is undefined', () => {
+    const mockData = [
+      { height: 10, offsetTop: 0 },
+      { height: 20, offsetTop: 10 },
+      { height: 30, offsetTop: 30 },
+    ];
+
+    const { result } = renderHook(({ data }) => useScrollTop({ sizeData: data, scrollTop: 100 }), {
+      initialProps: { data: mockData },
+    });
+    expect(result.current).toBe(100);
   });
 });
