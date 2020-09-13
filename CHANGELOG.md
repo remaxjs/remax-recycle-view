@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/remaxjs/remax-recycle-view/compare/v1.1.0...v1.1.1) (2020-09-13)
+
+
+### Bug Fixes
+
+* scroll top by index ([#25](https://github.com/remaxjs/remax-recycle-view/issues/25)) ([25bcd94](https://github.com/remaxjs/remax-recycle-view/commit/25bcd940bfff58aab1d035396374c432214298ac))
+
 ## [1.1.0](https://github.com/remaxjs/remax-recycle-view/compare/v1.0.3...v1.1.0) (2020-07-16)
 
 
