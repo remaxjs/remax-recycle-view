@@ -27,10 +27,7 @@ interface IRecycleProps {
 const isVisible = (start: number, end: number) => (_: any, index: number) =>
   index >= start && index <= end;
 
-const RecycleView: React.ForwardRefRenderFunction<any, IRecycleProps & ScrollViewProps> = (
-  props,
-  ref,
-) => {
+const RecycleView: React.ComponentType<IRecycleProps & ScrollViewProps> = props => {
   const {
     data = [],
     overscanCount = DEFAULT_OVERSCAN_COUNT,
@@ -58,7 +55,7 @@ const RecycleView: React.ForwardRefRenderFunction<any, IRecycleProps & ScrollVie
 
   const sizeData = useSizeData(data);
 
-  const currentScrollTop = useScrollTop({ scrollTopByIndex, scrollTop, sizeData });
+  const currentScrollTop = useScrollTop({ scrollTopByIndex, scrollTop, sizeData, headerHeight });
 
   const visibleData = React.useMemo(() => data.filter(isVisible(start, end)), [data, start, end]);
 
@@ -97,7 +94,6 @@ const RecycleView: React.ForwardRefRenderFunction<any, IRecycleProps & ScrollVie
     <ScrollView
       {...scrollViewProps}
       scrollY
-      ref={ref}
       onScroll={(e: any) => {
         handleScroll(e);
         onScroll && onScroll(e);
@@ -138,4 +134,4 @@ const RecycleView: React.ForwardRefRenderFunction<any, IRecycleProps & ScrollVie
   );
 };
 
-export default React.forwardRef(RecycleView);
+export default RecycleView;

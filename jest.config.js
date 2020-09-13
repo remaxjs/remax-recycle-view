@@ -14,6 +14,13 @@ module.exports = {
     ],
   },
   transformIgnorePatterns: ['node_modules/(?!(.*remax.*))'],
-  coveragePathIgnorePatterns: ['/node_modules/', '/example/', '/src/remax.*.tsx'],
+  coveragePathIgnorePatterns: [
+    '/node_modules/', 
+    '/example/', 
+    '/src/remax.wechat.tsx',
+    '/src/remax.toutiao.tsx',
+    '/src/utils.wechat.ts',
+    '/src/utils.toutiao.ts'
+  ],
   setupFiles: ['./tests/setup.js'],
 };

@@ -36,7 +36,7 @@ export function throttle<T extends (...args: any) => any>(func: T, wait: number)
   return throttled;
 }
 
-const systemInfo = my.getSystemInfoSync();
+const systemInfo = tt.getSystemInfoSync();
 
 export function transformRpxToPx(rpx: number) {
   return (rpx / 750) * systemInfo.windowWidth;
