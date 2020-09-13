@@ -70,7 +70,7 @@ describe('src/index.tsx', () => {
           renderBottom={() => {
             return <div style={{ height: 100, backgroundColor: 'yellow' }}>this is bottom</div>;
           }}
-          renderItem={({ text }) => {
+          renderItem={({ text }: any) => {
             return <div style={{ height: '100%' }}>{text}</div>;
           }}
         />,
@@ -78,7 +78,8 @@ describe('src/index.tsx', () => {
       const instance = component.root;
       const recycleView = instance.findByType(ScrollView);
 
-      const itemCount = (component.toJSON().children[1] as any).children[0].children.length;
+      const itemCount = ((component.toJSON() as any).children[1] as any).children[0].children
+        .length;
       expect(itemCount).toBe(11);
 
       // mock scroll to middle
@@ -87,7 +88,7 @@ describe('src/index.tsx', () => {
         handleScroll({ detail: { scrollTop: 25150, scrollHeight: 50200 } });
       });
 
-      const items = (component.toJSON().children[1] as any).children[0].children;
+      const items = ((component.toJSON() as any).children[1] as any).children[0].children;
       const itemCountAfterScroll = items.length;
       expect(itemCountAfterScroll).toBe(16);
       expect(items[0].children[0].children[0]).toBe('245');

@@ -6,7 +6,7 @@ jest.mock('@remax/runtime/cjs/stopPullDownRefresh', () => {
 
 // mock mini program getApp api
 const app = createAppConfig(undefined);
-// @ts-ignore
+
 global.getApp = () => app;
 global.stopPullDownRefresh = () => {};
 
