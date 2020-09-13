@@ -44,12 +44,13 @@ describe('src/hooks.tsx', () => {
     ];
 
     const { result } = renderHook(
-      ({ data }) => useScrollTop({ scrollTopByIndex: 1, sizeData: data, scrollTop: 100 }),
+      ({ data }) =>
+        useScrollTop({ scrollTopByIndex: 1, sizeData: data, scrollTop: 100, headerHeight: 100 }),
       {
         initialProps: { data: mockData },
       },
     );
-    expect(result.current).toBe(10);
+    expect(result.current).toBe(55);
   });
 
   it('should return correct scrollTop prop when scrollTopByIndex is undefined', () => {
@@ -59,9 +60,12 @@ describe('src/hooks.tsx', () => {
       { height: 30, offsetTop: 30 },
     ];
 
-    const { result } = renderHook(({ data }) => useScrollTop({ sizeData: data, scrollTop: 100 }), {
-      initialProps: { data: mockData },
-    });
+    const { result } = renderHook(
+      ({ data }) => useScrollTop({ sizeData: data, scrollTop: 100, headerHeight: 100 }),
+      {
+        initialProps: { data: mockData },
+      },
+    );
     expect(result.current).toBe(100);
   });
 });

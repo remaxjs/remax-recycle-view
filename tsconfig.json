@@ -10,7 +10,7 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "rootDirs": ["./src", "./typings"],
+    "rootDirs": ["./src"],
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "suppressImplicitAnyIndexErrors": true,
@@ -19,5 +19,5 @@
     "experimentalDecorators": true,
     "skipLibCheck": true
   },
-  "include": ["./src"]
+  "include": ["./src", "./typings", "./tests"]
 }

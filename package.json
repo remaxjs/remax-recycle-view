@@ -60,6 +60,7 @@
     "@types/sinon": "^9.0.0",
     "@umijs/fabric": "^2.0.8",
     "check-prettier": "^1.0.3",
+    "eslint": "^7.9.0",
     "father": "^2.29.3",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.2",
@@ -70,6 +71,7 @@
     "rimraf": "^3.0.2",
     "sinon": "^9.0.2",
     "standard-version": "^7.1.0",
+    "stylelint": "^13.7.1",
     "typescript": "^3.9.6"
   }
 }

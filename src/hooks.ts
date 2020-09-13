@@ -1,5 +1,6 @@
 import React from 'react';
 import { Item } from './index';
+import { transformRpxToPx } from './utils';
 
 /**
  * set visible range for recycle-view
@@ -45,15 +46,17 @@ export function useScrollTop({
   scrollTopByIndex,
   sizeData,
   scrollTop,
+  headerHeight,
 }: {
   scrollTopByIndex?: number;
   sizeData: ReturnType<typeof useSizeData>;
+  headerHeight: number;
   scrollTop?: number;
 }) {
   return React.useMemo(() => {
     if (scrollTopByIndex !== undefined) {
-      scrollTop = sizeData[scrollTopByIndex].offsetTop;
+      scrollTop = transformRpxToPx(sizeData[scrollTopByIndex].offsetTop + headerHeight);
     }
     return scrollTop;
-  }, [scrollTopByIndex, sizeData, scrollTop]);
+  }, [scrollTopByIndex, sizeData, scrollTop, headerHeight]);
 }
