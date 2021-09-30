@@ -1,3 +1,11 @@
+import { getSystemInfoSync } from './remax';
+
+const systemInfo = getSystemInfoSync();
+
+export function transformRpxToPx(rpx: number) {
+  return (rpx / 750) * systemInfo.windowWidth;
+}
+
 interface Throttled<T extends (...args: any) => any> {
   (this: ThisParameterType<T>, ...args: Parameters<T>): any;
   cancel(): void;
@@ -34,10 +42,4 @@ export function throttle<T extends (...args: any) => any>(func: T, wait: number)
   };
 
   return throttled;
-}
-
-const systemInfo = my.getSystemInfoSync();
-
-export function transformRpxToPx(rpx: number) {
-  return (rpx / 750) * systemInfo.windowWidth;
 }

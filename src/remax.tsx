@@ -1,1 +1,1 @@
-export { ScrollView, ScrollViewProps } from 'remax/ali';
+export { ScrollView, ScrollViewProps, getSystemInfoSync } from 'remax/ali';
