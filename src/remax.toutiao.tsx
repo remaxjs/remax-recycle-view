@@ -1,1 +1,1 @@
-export { ScrollView, ScrollViewProps } from 'remax/toutiao';
+export { ScrollView, ScrollViewProps, getSystemInfoSync } from 'remax/toutiao';
